@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
+    let a = 10
     @IBOutlet weak var loginText:UITextField!
     @IBOutlet weak var passwordText:UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
