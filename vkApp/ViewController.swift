@@ -10,35 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let a = 10
     @IBOutlet weak var loginText:UITextField!
     @IBOutlet weak var passwordText:UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
     
     
         
-    @IBAction func loginButtonPressed(_ sender: Any) {
-        let login = loginText.text!
-        let password = passwordText.text!
-        
-        if login == "admin" && password == "admin" {
-            print("Успешная авторизация")
-            let alert = UIAlertController(title: "Добро пожаловать", message: "Данные введены верно", preferredStyle: .actionSheet)
-            alert.addAction(UIAlertAction(title: "great", style: .default))
-            self.present(alert, animated: true)
-            
-            
-        } else {
-            print("Не самая успешная авторизация")
-            let alert = UIAlertController(title: "Предупреждение", message: "Неверно введен логин или пароль login: admin, password: admin", preferredStyle: .actionSheet)
-            alert.addAction(UIAlertAction(title: "ok, i will try again", style: .default))
+    
 
-
-            self.present(alert, animated: true)
-
-        }
-        
-    }
     
 
     override func viewDidLoad() {
@@ -90,9 +69,33 @@ class ViewController: UIViewController {
     @objc func hideKeyboard() {
         self.scrollView?.endEditing(true)
     }
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+            switch identifier {
+            case "loginSegue":
+                let isLoginTrue = login()
+                if !isLoginTrue {
+                    alertLogin()
+                }
+                return isLoginTrue
+            default:
+                return true
+            }
+        
+    }
 
-
-
+    func login() -> Bool {
+        let login = loginText.text!
+        let password = passwordText.text!
+        
+        return login == "admin" && password == "admin"
+    }
+    func alertLogin() {
+        let alert = UIAlertController(title: "Предупреждение", message: "Неверно введен логин или пароль", preferredStyle: .actionSheet)
+         alert.addAction(UIAlertAction(title: "Оке, я попробую еще разок", style: .default))
+         return self.present(alert, animated: true)
+    }
+    
 
 }
+
 
