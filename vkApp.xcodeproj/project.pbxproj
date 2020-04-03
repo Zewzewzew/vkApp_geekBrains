@@ -13,6 +13,11 @@
 		4DE3E97A242B705200A51AFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DE3E978242B705200A51AFC /* Main.storyboard */; };
 		4DE3E97C242B705600A51AFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DE3E97B242B705600A51AFC /* Assets.xcassets */; };
 		4DE3E97F242B705600A51AFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DE3E97D242B705600A51AFC /* LaunchScreen.storyboard */; };
+		4DE3E9872436031E00A51AFC /* FriendListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3E9862436031E00A51AFC /* FriendListTableViewController.swift */; };
+		4DE3E98924372C9F00A51AFC /* FriendListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3E98824372C9F00A51AFC /* FriendListCell.swift */; };
+		4DE3E98B24377A2100A51AFC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3E98A24377A2100A51AFC /* User.swift */; };
+		4DE3E98D243793C800A51AFC /* FriendPhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3E98C243793C800A51AFC /* FriendPhotoCollectionViewController.swift */; };
+		4DE3E98F243794AC00A51AFC /* FriendPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3E98E243794AC00A51AFC /* FriendPhotoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		4DE3E97B242B705600A51AFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DE3E97E242B705600A51AFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DE3E980242B705600A51AFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DE3E9862436031E00A51AFC /* FriendListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListTableViewController.swift; sourceTree = "<group>"; };
+		4DE3E98824372C9F00A51AFC /* FriendListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListCell.swift; sourceTree = "<group>"; };
+		4DE3E98A24377A2100A51AFC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4DE3E98C243793C800A51AFC /* FriendPhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		4DE3E98E243794AC00A51AFC /* FriendPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +69,25 @@
 				4DE3E972242B705200A51AFC /* AppDelegate.swift */,
 				4DE3E974242B705200A51AFC /* SceneDelegate.swift */,
 				4DE3E976242B705200A51AFC /* ViewController.swift */,
+				4DE3E9912437A01800A51AFC /* Cells */,
+				4DE3E98C243793C800A51AFC /* FriendPhotoCollectionViewController.swift */,
 				4DE3E978242B705200A51AFC /* Main.storyboard */,
+				4DE3E9862436031E00A51AFC /* FriendListTableViewController.swift */,
+				4DE3E98A24377A2100A51AFC /* User.swift */,
 				4DE3E97B242B705600A51AFC /* Assets.xcassets */,
 				4DE3E97D242B705600A51AFC /* LaunchScreen.storyboard */,
 				4DE3E980242B705600A51AFC /* Info.plist */,
 			);
 			path = vkApp;
+			sourceTree = "<group>";
+		};
+		4DE3E9912437A01800A51AFC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4DE3E98E243794AC00A51AFC /* FriendPhotoCell.swift */,
+				4DE3E98824372C9F00A51AFC /* FriendListCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +162,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DE3E977242B705200A51AFC /* ViewController.swift in Sources */,
+				4DE3E9872436031E00A51AFC /* FriendListTableViewController.swift in Sources */,
+				4DE3E98F243794AC00A51AFC /* FriendPhotoCell.swift in Sources */,
+				4DE3E98B24377A2100A51AFC /* User.swift in Sources */,
+				4DE3E98924372C9F00A51AFC /* FriendListCell.swift in Sources */,
 				4DE3E973242B705200A51AFC /* AppDelegate.swift in Sources */,
 				4DE3E975242B705200A51AFC /* SceneDelegate.swift in Sources */,
+				4DE3E98D243793C800A51AFC /* FriendPhotoCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
