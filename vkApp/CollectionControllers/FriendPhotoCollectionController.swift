@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class FriendPhotoCollectionViewController: UICollectionViewController {
+class FriendPhotoCollectionController: UICollectionViewController {
 
     
     var friendPhoto: User?

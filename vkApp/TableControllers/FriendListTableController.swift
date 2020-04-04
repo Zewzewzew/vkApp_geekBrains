@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FriendListTableViewController: UITableViewController {
+class FriendListTableController: UITableViewController {
     //var myFriend:[User] = (userName:"Арагорн", userImage:UIImage(contentsOfFile: "aragorn.jpg"))
 
     var myFriend = [User(userName: "Арагорн", userImage: UIImage(named: "Арагорн.jpg")!),
@@ -48,7 +48,7 @@ class FriendListTableViewController: UITableViewController {
         return cell
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let FriendPhotoCollectionViewController = segue.destination as? FriendPhotoCollectionViewController,
+        guard let FriendPhotoCollectionViewController = segue.destination as? FriendPhotoCollectionController,
             let index = tableView.indexPathForSelectedRow?.row
             else {
                 return
