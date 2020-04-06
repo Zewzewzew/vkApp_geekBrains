@@ -11,10 +11,10 @@ struct Community {
     var name: String
     var subscribers: Int
     var image: UIImage
-    init(name: String, subscribers: Int, image: UIImage) {
-        self.name = name
-        self.subscribers = subscribers
-        self.image = image
-        return
+
+}
+extension Community : Equatable {
+    static func == (lhs: Community, rhs: Community) -> Bool {
+        lhs.name == rhs.name && lhs.image == rhs.image
     }
 }

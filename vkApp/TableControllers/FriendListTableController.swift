@@ -9,8 +9,13 @@
 import UIKit
 
 class FriendListTableController: UITableViewController {
-    //var myFriend:[User] = (userName:"Арагорн", userImage:UIImage(contentsOfFile: "aragorn.jpg"))
 
+    
+    class ShadowView: UIView {
+        override class var layerClass: AnyClass {
+            return CAShapeLayer.self
+        }
+    }
     var myFriend = [User(userName: "Арагорн", userImage: UIImage(named: "Арагорн.jpg")!),
                     User(userName: "Аватар Аанг", userImage: UIImage(named: "Аватар Аанг.jpg")!),
                     User(userName: "Джон Уик", userImage: UIImage(named: "Джон Уик.jpg")!),
@@ -21,11 +26,7 @@ class FriendListTableController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
@@ -44,7 +45,8 @@ class FriendListTableController: UITableViewController {
         cell.FriendNameLabel.text = myFriend[indexPath.row].userName
         cell.FriendImage.image = myFriend[indexPath.row].userImage
         cell.FriendImage.layer.cornerRadius = cell.FriendImage.frame.height / 2
-    
+        cell.FriendImageView.dropShadow()
+        
         return cell
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

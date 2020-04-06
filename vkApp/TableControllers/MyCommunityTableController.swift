@@ -37,29 +37,34 @@ class MyCommunityTableController: UITableViewController {
         cell.MyCommunityImage.image = myCommunity[indexPath.row].image
         cell.MyCommunityImage.layer.cornerRadius = cell.MyCommunityImage.layer.frame.height / 2
         
+        
+        
         return cell
     }
     @IBAction func addCommunity(segue: UIStoryboardSegue) {
+        
         if segue.identifier == "addCommunity" {
             
             let SearchCommunityController = segue.source as! SearchCommunityTableController
             
             if let indexPath = SearchCommunityController.tableView.indexPathForSelectedRow {
-        // Получаем город по индексу
                 let newCommunity = SearchCommunityController.searchCommunity[indexPath.row]
-        // Добавляем город в список выбранных городов
-                myCommunity.append(newCommunity)
-                tableView.reloadData()
+                
+                if !myCommunity.contains(newCommunity) {
+                    
+                    myCommunity.append(newCommunity)
+                    tableView.reloadData()
+                }
+                
+                
             }
         }
         
     }
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        // Если была нажата кнопка «Удалить»
+        
         if editingStyle == .delete {
-        // Удаляем город из массива
             myCommunity.remove(at: indexPath.row)
-        // И удаляем строку из таблицы
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }

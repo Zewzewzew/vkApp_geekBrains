@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -134,30 +134,39 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FS0-gC-p02">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUe-Ph-Myd" customClass="TestView">
                                             <rect key="frame" x="10" y="2.5" width="65" height="65"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FS0-gC-p02">
+                                                    <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="65" id="XyC-1D-jvK"/>
-                                                <constraint firstAttribute="width" constant="65" id="elX-q0-pyV"/>
+                                                <constraint firstAttribute="width" constant="65" id="LzV-iL-56i"/>
+                                                <constraint firstAttribute="height" constant="65" id="weJ-tz-cvQ"/>
                                             </constraints>
-                                        </imageView>
+                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some Friend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pa6-i0-8ih">
-                                            <rect key="frame" x="100" y="24.5" width="314" height="21"/>
+                                            <rect key="frame" x="103" y="24.5" width="96.5" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="FS0-gC-p02" firstAttribute="centerY" secondItem="26a-AQ-4a5" secondAttribute="centerY" id="3Po-op-6vx"/>
                                         <constraint firstItem="Pa6-i0-8ih" firstAttribute="centerY" secondItem="26a-AQ-4a5" secondAttribute="centerY" id="6cd-OK-h4p"/>
-                                        <constraint firstItem="FS0-gC-p02" firstAttribute="leading" secondItem="26a-AQ-4a5" secondAttribute="leading" constant="10" id="8ti-uH-m1Y"/>
-                                        <constraint firstAttribute="trailing" secondItem="Pa6-i0-8ih" secondAttribute="trailing" id="AwO-2S-0Ik"/>
-                                        <constraint firstItem="Pa6-i0-8ih" firstAttribute="leading" secondItem="FS0-gC-p02" secondAttribute="trailing" constant="25" id="SoW-Mg-U4q"/>
+                                        <constraint firstItem="Pa6-i0-8ih" firstAttribute="leading" secondItem="dUe-Ph-Myd" secondAttribute="trailing" constant="28" id="JFg-0Y-2DH"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstItem="dUe-Ph-Myd" firstAttribute="leading" secondItem="TMT-Yh-QIZ" secondAttribute="leading" constant="10" id="drK-zS-tzz"/>
+                                    <constraint firstItem="dUe-Ph-Myd" firstAttribute="centerY" secondItem="TMT-Yh-QIZ" secondAttribute="centerY" id="neJ-8D-LuJ"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="FriendImage" destination="FS0-gC-p02" id="9aW-CJ-1Y2"/>
+                                    <outlet property="FriendImageView" destination="dUe-Ph-Myd" id="6fs-G4-85C"/>
                                     <outlet property="FriendNameLabel" destination="Pa6-i0-8ih" id="4mM-cB-iPU"/>
                                     <segue destination="1xc-2k-Ctu" kind="show" id="hQ4-xb-O5w"/>
                                 </connections>
@@ -200,19 +209,11 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mMl-kw-lVM">
                                             <rect key="frame" x="0.0" y="0.0" width="148" height="148"/>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SaD-zd-dvv">
-                                            <rect key="frame" x="119.5" y="116" width="20.5" height="24"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <color key="tintColor" red="1" green="0.33590147406691873" blue="0.46474999672530937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <state key="normal" image="heart" catalog="system"/>
-                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="mMl-kw-lVM" firstAttribute="top" secondItem="iuE-SI-NLh" secondAttribute="top" id="2nc-2V-VAO"/>
                                         <constraint firstItem="mMl-kw-lVM" firstAttribute="leading" secondItem="iuE-SI-NLh" secondAttribute="leading" id="HJd-gi-ZWE"/>
                                         <constraint firstAttribute="bottom" secondItem="mMl-kw-lVM" secondAttribute="bottom" id="ax9-xz-3bh"/>
-                                        <constraint firstAttribute="bottom" secondItem="SaD-zd-dvv" secondAttribute="bottom" constant="8" id="wiG-Jz-ljI"/>
-                                        <constraint firstAttribute="trailing" secondItem="SaD-zd-dvv" secondAttribute="trailing" constant="8" id="xHC-MJ-gRe"/>
                                         <constraint firstAttribute="trailing" secondItem="mMl-kw-lVM" secondAttribute="trailing" id="zJ9-E3-OAp"/>
                                     </constraints>
                                 </collectionViewCellContentView>
@@ -397,8 +398,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heart" catalog="system" width="64" height="54"/>
-        <image name="person.2.fill" catalog="system" width="64" height="40"/>
-        <image name="square.split.2x2.fill" catalog="system" width="64" height="56"/>
+        <image name="person.2.fill" catalog="system" width="128" height="80"/>
+        <image name="square.split.2x2.fill" catalog="system" width="128" height="114"/>
     </resources>
 </document>
