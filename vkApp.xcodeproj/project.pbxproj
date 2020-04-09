@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D4C58DC243F719B00BD21BD /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4C58DB243F719B00BD21BD /* LikeButton.swift */; };
 		4D74DC0B243DE86500ED85A1 /* GradientLoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D74DC0A243DE86500ED85A1 /* GradientLoginFormView.swift */; };
 		4D74DC0D243DF53100ED85A1 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D74DC0C243DF53100ED85A1 /* ShadowView.swift */; };
 		4DE3E973242B705200A51AFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3E972242B705200A51AFC /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D4C58DB243F719B00BD21BD /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		4D74DC0A243DE86500ED85A1 /* GradientLoginFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoginFormView.swift; sourceTree = "<group>"; };
 		4D74DC0C243DF53100ED85A1 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		4DE3E96F242B705200A51AFC /* vkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,7 @@
 				4D74DC0E243DF54300ED85A1 /* New Group */,
 				4DE3E978242B705200A51AFC /* Main.storyboard */,
 				4D74DC0A243DE86500ED85A1 /* GradientLoginFormView.swift */,
+				4D4C58DB243F719B00BD21BD /* LikeButton.swift */,
 				4D74DC0C243DF53100ED85A1 /* ShadowView.swift */,
 				4DE3E976242B705200A51AFC /* LoginController.swift */,
 				4DE3E99A2437EA5000A51AFC /* CollectionControllers */,
@@ -234,6 +237,7 @@
 				4D74DC0D243DF53100ED85A1 /* ShadowView.swift in Sources */,
 				4DE3E9932437E6D300A51AFC /* MyCommunityTableController.swift in Sources */,
 				4DE3E973242B705200A51AFC /* AppDelegate.swift in Sources */,
+				4D4C58DC243F719B00BD21BD /* LikeButton.swift in Sources */,
 				4DE3E975242B705200A51AFC /* SceneDelegate.swift in Sources */,
 				4DE3E9972437E8EB00A51AFC /* Community.swift in Sources */,
 				4DE3E98D243793C800A51AFC /* FriendPhotoCollectionController.swift in Sources */,

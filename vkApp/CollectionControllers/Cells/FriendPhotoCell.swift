@@ -9,6 +9,9 @@
 import UIKit
 
 class FriendPhotoCell: UICollectionViewCell {
+    
     @IBOutlet weak var AlbumFriendPhoto: UIImageView!
     
+    @IBAction func LikeButton(_ sender: LikeButton) {
+    }
 }

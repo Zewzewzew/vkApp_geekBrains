@@ -259,23 +259,30 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mMl-kw-lVM">
                                             <rect key="frame" x="0.0" y="0.0" width="413" height="477"/>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8C-z3-RVF">
-                                            <rect key="frame" x="369" y="488" width="22" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button" image="heart" catalog="system"/>
-                                        </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Лайков: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39q-Wd-B4F">
-                                            <rect key="frame" x="264" y="487" width="81" height="25"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Лайков: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39q-Wd-B4F">
+                                            <rect key="frame" x="28" y="488" width="81" height="25"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H8C-z3-RVF" customClass="LikeButton" customModule="vkApp" customModuleProvider="target">
+                                            <rect key="frame" x="305.5" y="490" width="46" height="21"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="LikeButton:" destination="HI3-Of-Zxw" eventType="touchUpInside" id="feJ-44-22o"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="mMl-kw-lVM" firstAttribute="top" secondItem="iuE-SI-NLh" secondAttribute="top" id="2nc-2V-VAO"/>
+                                        <constraint firstItem="39q-Wd-B4F" firstAttribute="leading" secondItem="iuE-SI-NLh" secondAttribute="leading" constant="28" id="8ul-dk-Pc3"/>
                                         <constraint firstItem="mMl-kw-lVM" firstAttribute="leading" secondItem="iuE-SI-NLh" secondAttribute="leading" id="HJd-gi-ZWE"/>
+                                        <constraint firstItem="H8C-z3-RVF" firstAttribute="leading" secondItem="39q-Wd-B4F" secondAttribute="trailing" constant="200" id="RJ7-lB-GQb"/>
                                         <constraint firstAttribute="bottom" secondItem="mMl-kw-lVM" secondAttribute="bottom" constant="100" id="ax9-xz-3bh"/>
+                                        <constraint firstAttribute="bottom" secondItem="39q-Wd-B4F" secondAttribute="bottom" constant="67" id="i38-uI-6cI"/>
+                                        <constraint firstItem="39q-Wd-B4F" firstAttribute="top" secondItem="mMl-kw-lVM" secondAttribute="bottom" constant="11" id="oa7-98-7i8"/>
+                                        <constraint firstAttribute="bottom" secondItem="H8C-z3-RVF" secondAttribute="bottom" constant="69" id="q4L-PB-VMg"/>
+                                        <constraint firstItem="H8C-z3-RVF" firstAttribute="top" secondItem="mMl-kw-lVM" secondAttribute="bottom" constant="10" id="xXG-7j-heG"/>
                                         <constraint firstAttribute="trailing" secondItem="mMl-kw-lVM" secondAttribute="trailing" id="zJ9-E3-OAp"/>
                                     </constraints>
                                 </collectionViewCellContentView>
@@ -513,7 +520,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
         <image name="square.split.2x2.fill" catalog="system" width="128" height="114"/>
     </resources>
