@@ -9,28 +9,24 @@
 import UIKit
 
 class FriendListTableController: UITableViewController {
+ 
 
+    var myFriend = [User(userName: "Арагорн", userImage: UIImage(named: "Арагорн.jpg")!,userPhotos: aragornPhotos),
+                    User(userName: "Аватар Аанг", userImage: UIImage(named: "Аватар Аанг.jpg")!,userPhotos:avatarAangPhotos),
+                    User(userName: "Джон Уик", userImage: UIImage(named: "Джон Уик.jpg")!,userPhotos:johnWickPhotos),
+                    User(userName: "Тралл", userImage: UIImage(named: "Тралл.jpg")!,userPhotos:trallPhotos),
+                    User(userName: "Клифф Бут", userImage: UIImage(named: "Клифф Бут.jpg")!,userPhotos:cliffBootPhotos),
+                    User(userName: "Ктулху", userImage: UIImage(named: "Ктулху.jpg")!,userPhotos:ctulhuPhotos)]
     
-    class ShadowView: UIView {
-        override class var layerClass: AnyClass {
-            return CAShapeLayer.self
-        }
-    }
-    var myFriend = [User(userName: "Арагорн", userImage: UIImage(named: "Арагорн.jpg")!),
-                    User(userName: "Аватар Аанг", userImage: UIImage(named: "Аватар Аанг.jpg")!),
-                    User(userName: "Джон Уик", userImage: UIImage(named: "Джон Уик.jpg")!),
-                    User(userName: "Тралл", userImage: UIImage(named: "Тралл.jpg")!),
-                    User(userName: "Клифф Бут", userImage: UIImage(named: "Клифф Бут.jpg")!),
-                    User(userName: "Ктулху", userImage: UIImage(named: "Ктулху.jpg")!)]
 
+ 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        
     }
-
-    // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -42,13 +38,14 @@ class FriendListTableController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendListCell", for: indexPath) as! FriendListCell
-        cell.FriendNameLabel.text = myFriend[indexPath.row].userName
-        cell.FriendImage.image = myFriend[indexPath.row].userImage
+        let friend = myFriend[indexPath.row]
+        cell.FriendNameLabel.text = friend.userName
+        cell.FriendImage.image = friend.userImage
         cell.FriendImage.layer.cornerRadius = cell.FriendImage.frame.height / 2
-        cell.FriendImageView.dropShadow()
         
         return cell
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let FriendPhotoCollectionViewController = segue.destination as? FriendPhotoCollectionController,
             let index = tableView.indexPathForSelectedRow?.row

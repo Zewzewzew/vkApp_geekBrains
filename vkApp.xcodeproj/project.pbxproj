@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D74DC0B243DE86500ED85A1 /* GradientLoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D74DC0A243DE86500ED85A1 /* GradientLoginFormView.swift */; };
+		4D74DC0D243DF53100ED85A1 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D74DC0C243DF53100ED85A1 /* ShadowView.swift */; };
 		4DE3E973242B705200A51AFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3E972242B705200A51AFC /* AppDelegate.swift */; };
 		4DE3E975242B705200A51AFC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3E974242B705200A51AFC /* SceneDelegate.swift */; };
 		4DE3E977242B705200A51AFC /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3E976242B705200A51AFC /* LoginController.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D74DC0A243DE86500ED85A1 /* GradientLoginFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLoginFormView.swift; sourceTree = "<group>"; };
+		4D74DC0C243DF53100ED85A1 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		4DE3E96F242B705200A51AFC /* vkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE3E972242B705200A51AFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DE3E974242B705200A51AFC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D74DC0E243DF54300ED85A1 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				4DE3E974242B705200A51AFC /* SceneDelegate.swift */,
+				4DE3E972242B705200A51AFC /* AppDelegate.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		4DE3E966242B705200A51AFC = {
 			isa = PBXGroup;
 			children = (
@@ -76,9 +89,10 @@
 		4DE3E971242B705200A51AFC /* vkApp */ = {
 			isa = PBXGroup;
 			children = (
-				4DE3E972242B705200A51AFC /* AppDelegate.swift */,
-				4DE3E974242B705200A51AFC /* SceneDelegate.swift */,
+				4D74DC0E243DF54300ED85A1 /* New Group */,
 				4DE3E978242B705200A51AFC /* Main.storyboard */,
+				4D74DC0A243DE86500ED85A1 /* GradientLoginFormView.swift */,
+				4D74DC0C243DF53100ED85A1 /* ShadowView.swift */,
 				4DE3E976242B705200A51AFC /* LoginController.swift */,
 				4DE3E99A2437EA5000A51AFC /* CollectionControllers */,
 				4DE3E9992437EA0C00A51AFC /* TableControllers */,
@@ -214,8 +228,10 @@
 				4DE3E98F243794AC00A51AFC /* FriendPhotoCell.swift in Sources */,
 				4DE3E98B24377A2100A51AFC /* User.swift in Sources */,
 				4DE3E98924372C9F00A51AFC /* FriendListCell.swift in Sources */,
+				4D74DC0B243DE86500ED85A1 /* GradientLoginFormView.swift in Sources */,
 				4DE3E99F2437FB9900A51AFC /* SearchComminityCell.swift in Sources */,
 				4DE3E99D2437FB3600A51AFC /* SearchCommunityTableController.swift in Sources */,
+				4D74DC0D243DF53100ED85A1 /* ShadowView.swift in Sources */,
 				4DE3E9932437E6D300A51AFC /* MyCommunityTableController.swift in Sources */,
 				4DE3E973242B705200A51AFC /* AppDelegate.swift in Sources */,
 				4DE3E975242B705200A51AFC /* SceneDelegate.swift in Sources */,

@@ -12,11 +12,13 @@ class SearchCommunityCell: UITableViewCell {
 
     @IBOutlet weak var SearchCommunityImage: UIImageView!
     @IBOutlet weak var SearchCommunityLabel: UILabel!
+    @IBOutlet weak var SearchCommunityShadow: UIView!
+
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        SearchCommunityShadow.layer.cornerRadius = SearchCommunityShadow.frame.height / 2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -26,3 +28,4 @@ class SearchCommunityCell: UITableViewCell {
     }
 
 }
+
