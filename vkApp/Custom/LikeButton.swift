@@ -8,15 +8,20 @@
 
 import UIKit
 class LikeButton: UIButton {
+    
     var status = false
     var likeCounter = 0
     
-    @objc func like() {
+    @objc func like(likeCount :UILabel) {
         status.toggle()
         if status {
             likeIt()
+            likeCounter = likeCounter + 1
         } else {
             dislikeIt()
+            likeCounter = likeCounter - 1
+            
+
         }
     }
     
@@ -26,6 +31,8 @@ class LikeButton: UIButton {
     }
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        withoutLike()
+
     }
     private func withoutLike() {
         setImage(UIImage(systemName: "heart"), for: .normal)

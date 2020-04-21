@@ -11,7 +11,18 @@ import UIKit
 class FriendPhotoCell: UICollectionViewCell {
     
     @IBOutlet weak var AlbumFriendPhoto: UIImageView!
+    @IBOutlet weak var AlbumFriendLabel: UILabel!
     
+    var isLiked = false
+
     @IBAction func LikeButton(_ sender: LikeButton) {
+        if !isLiked {
+            AlbumFriendLabel.text = "Лайков: 1"
+            isLiked = true
+        } else{
+            AlbumFriendLabel.text = "Лайков: 0"
+            isLiked = false
+
+        }
     }
 }

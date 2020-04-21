@@ -13,6 +13,7 @@ class FriendListCell: UITableViewCell {
     @IBOutlet weak var FriendNameLabel: UILabel!
     @IBOutlet weak var FriendImage: UIImageView!
     @IBOutlet weak var FriendImageView: UIView!
+    var usableSectionValues:[User] = []
 
 
     override func awakeFromNib() {
@@ -22,8 +23,7 @@ class FriendListCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
     }
 
 }
