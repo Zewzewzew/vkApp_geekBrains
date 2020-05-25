@@ -18,22 +18,12 @@ class NewsCell: UITableViewCell {
     @IBOutlet weak var shadowView: ShadowView!
     @IBOutlet weak var avatarImage: UIImageView!
     
+    @IBOutlet weak var mainImage: UIImageView!
     @IBOutlet weak var textForNew: UILabel!
-    @IBOutlet weak var collectionImageNew: UICollectionView!
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        shadowView.layer.cornerRadius = shadowView.frame.height / 2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

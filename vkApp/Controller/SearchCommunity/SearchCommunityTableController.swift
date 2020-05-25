@@ -3,10 +3,10 @@ import UIKit
 
 class SearchCommunityTableController: UITableViewController {
     
-    var searchCommunity = [Community(name: "Saint-Petersburg", subscribers: 10000, image: UIImage(named: "Санкт-Петербург.jpg")!),
-                           Community(name: "BBC-chanell", subscribers: 10000, image: UIImage(named: "BBC.jpg")!),
-                           Community(name: "Скидки Aliexpress", subscribers: 10000, image: UIImage(named: "Aliexrpess.jpg")!),
-                           Community(name: "Ковры дешево", subscribers: 10000, image: UIImage(named: "Ковер.jpg")!)]
+    var searchCommunity = [Community(name: "Saint-Petersburg", subscribers: 10000, image: UIImage(named: "Санкт-Петербург")!),
+                           Community(name: "BBC-chanell", subscribers: 10000, image: UIImage(named: "BBC")!),
+                           Community(name: "Скидки Aliexpress", subscribers: 10000, image: UIImage(named: "Aliexrpess")!),
+                           Community(name: "Ковры дешево", subscribers: 10000, image: UIImage(named: "Ковер")!)]
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -32,6 +32,12 @@ class NewsTableController: UITableViewController {
         cell.nameLabel.text = new.user.userName
         cell.avatarImage.image = new.user.userImage
         cell.textForNew.text = new.text
+        cell.mainImage.image = new.image
+        cell.timeLabel.text = new.timeAgo
+        
+        
+        
+        cell.avatarImage.layer.cornerRadius = cell.avatarImage.frame.height / 2
         
         
         

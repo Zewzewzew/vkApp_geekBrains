@@ -41,11 +41,21 @@ class LikeButton: UIButton {
     }
     func likeIt() {
         setImage(UIImage(systemName: "heart.fill"), for: .normal)
-        tintColor = .red
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.5,
+                       usingSpringWithDamping: 1.0,
+                       initialSpringVelocity: 0.0,
+                       options: [],
+                       animations: {
+                self.tintColor = .red
+
+        })
     }
     func dislikeIt() {
         setImage(UIImage(systemName: "heart"), for: .normal)
-        tintColor = .blue
+        UIView.animate(withDuration: 0.5, animations: {
+            self.tintColor = .blue
+        })
     }
     
     
